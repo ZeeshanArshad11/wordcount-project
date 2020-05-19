@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Here is the result</title>
+    <!-- CSS only -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+<!-- JS, Popper.js, and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+          <h1 class="display-4">Word Counter Result</h1>
+        </div>
+      </div>
+      <h2>Your Text : </h2>
+      <div class="p-3 mb-2 bg-info text-dark"><b>{{ yourtext }}</b></div>
+      <input class="btn btn-warning" type="button" onclick="window.location.href ='{% url 'home' %}' ;" value="Start Again">
+      <h2>Text Count :</h2>
+      <p class="alert alert-success">There is a <b> {{ count }} </b>words in your text.</p>
+      <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">Words</th>
+            <th scope="col">Count</th>
+          </tr>
+        </thead>
+
+        {% for word, total in sortedwords %}
+          {% if total != 1 %}
+            <tr>
+              <td>{{ word }}</td>
+              <td>{{ total }}</td>
+            </tr>
+            {% endif %}
+        {% endfor %}
+      </table>
+  </div>
+  </body>
+</html>

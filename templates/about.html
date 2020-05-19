@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>This is About Page</title>
+    <!-- CSS only -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+<!-- JS, Popper.js, and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href=" {% url 'home' %} ">WORD COUNTER</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="{% url 'about' %}">About</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4">About Us</h1>
+    <p class="lead">At wordcount.com, we believe everyone deserves to have a website or online store. Innovation and simplicity makes us happy: our goal is to remove any technical or financial barriers that can prevent business owners from making their own website. We're excited to help you on your journey!</p>
+  </div>
+</div>
+    <div class="aboutus-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-10 col-sm-6 col-xs-12">
+                        <div class="aboutus">
+                            <h4 class="aboutus-text"> Accessible to All  </h4>
+                            <p class="aboutus-text">Digital technologies have empowered those with disabilities in a variety of ways, and new web standards have made it easier than ever to build new tools that are accessible to all. DataBasic implements those technologies to support screen readers so the visually impaired can start working with data in new and exciting ways.</p>
+                            <h4 class="aboutus-text"> Manage Data from everywhere  </h4>
+                            <p class="aboutus-text">Everywhere Managed is a full-service sales and marketing outsourcing firm that helps our clients generate demand for their products and services by creating opportunities for engagement with prospective buyers. We support clients that range from the Fortune 50 to SaaS startups to small services-based businesses.If you're looking to find more leads, attendees, prospects and clients you're in the right place.We'll build it for you, build it with sales and marketing engine!</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+  </body>
+</html>
